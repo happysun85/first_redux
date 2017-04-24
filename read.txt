@@ -1,0 +1,39 @@
+//  Store 数据存储
+//        import { createStore } from 'redux';
+//        const store = createStore(fn);
+
+//        store.dispatch()      这是view发出action的唯一方法
+//        store.subscribe()     监听state变化
+//        const state = store.getState();
+
+
+
+
+//  State 当前时刻的 State.
+//        import { createStore } from 'redux';
+//        const store = createStore(fn);
+
+
+//  Action 必须通过action 来操作state
+//        操作流程为  view => action => state => view
+//        详细的流程  view 使用 dispath(action) => reduce操作state
+//        定义一个函数来生成 Action，这个函数就叫 Action Creator。
+//        const ADD_TODO = '添加 TODO';
+//
+//        function addTodo(text) {
+//          return {
+//            type: ADD_TODO,
+//            text
+//          }
+//        }
+//
+//        const action = addTodo('Learn Redux');
+
+
+//  Reducer 接收 action 并返回一个新的state
+
+
+
+//  import { combineReducers } from 'redux';  拆分reduce  :不如说是合并reduce为一个大的
+//  注意 ： State 的属性名必须与子 Reducer 同名。如果不同名，就要采用下面的写法。
+
