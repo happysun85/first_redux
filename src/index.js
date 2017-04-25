@@ -2,10 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux'  //按我理解。这个provider就是redux提供给 react 的组件化容器   扩展知识： 还有router-redux什么的
-import App from './containers/App';   //还需要具体理解
-import todoApp from './reducers';
 
-let store = createStore(todoApp);
+//这俩是gitDEMO的
+/*import App from './gitDemo/containers/App';   //还需要具体理解
+ import todoApp from './gitDemo/reducers';*/
+
+//这是imooc 的
+import App from './imoocDemo/components/App';
+import todoApp from './imoocDemo/reducers';
+
+let store = createStore(
+    todoApp,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 ReactDOM.render(
     <Provider store={store}>
