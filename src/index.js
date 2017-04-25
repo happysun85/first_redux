@@ -8,7 +8,7 @@ import todoApp from './reducers';
 let store = createStore(todoApp);
 
 ReactDOM.render(
-    <Provider>
+    <Provider store={store}>
       <App/>
     </Provider>,
     document.getElementById('root')

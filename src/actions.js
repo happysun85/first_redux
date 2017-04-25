@@ -6,7 +6,7 @@ export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
 //这个js的作用就是定义一些类型，这个类型是用于传给 reducer 操作的 ，结构应该也是要和reducer里的action分发后操作对应
 
 //过滤类型常量
-export const VisibilityFIlters = {
+export const VisibilityFilters  = {
   SHOW_ALL: 'SHOW_ALL',              //全显示
   SHOW_COMPLETED: 'SHOW_COMPLETED',  //只显示完成
   SHOW_ACTIVE: 'SHOW_ACTIVE'         //只显示未完成
