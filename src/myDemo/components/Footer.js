@@ -1,10 +1,6 @@
-import React, {PropTypes} from 'react';
+import React, {Component} from 'react'
 
-/**
- * 当前js是一个footer组件
- */
-
-class Footer extends React.Component {
+export default class Footer extends Component {
   // 渲染条件Links      这拆的更细了，又整一个li里的a标签出来
   renderFilter(filter, name) {
     if (filter === this.props.filter) {
@@ -37,15 +33,3 @@ class Footer extends React.Component {
     )
   }
 }
-
-// props 验证
-Footer.propTypes = {
-  onFilterChange: PropTypes.func.isRequired,
-  filter: PropTypes.oneOf([
-    'SHOW_ALL',
-    'SHOW_COMPLETED',
-    'SHOW_ACTIVE'
-  ]).isRequired
-}
-
-export default Footer;

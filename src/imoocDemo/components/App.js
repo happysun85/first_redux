@@ -8,8 +8,8 @@ import Footer from './Footer'
 const App = () => (
     <div>
       <AddTodo/>
-      {/*<VisibleTodoList/>
-       <Footer/>*/}
+      {<VisibleTodoList/>
+       <Footer/>}
     </div>
 )
 

@@ -7,9 +7,13 @@ import {Provider} from 'react-redux'  //按我理解。这个provider就是redux
 /*import App from './gitDemo/containers/App';   //还需要具体理解
  import todoApp from './gitDemo/reducers';*/
 
-//这是imooc 的
-import App from './imoocDemo/components/App';
-import todoApp from './imoocDemo/reducers';
+//这是官方demo
+/*import App from './OfficialDemo/containers/App';
+ import todoApp from './OfficialDemo/reducers';*/
+
+//个人的demo
+import App from './myDemo/containers/App';
+import todoApp from './myDemo/reducers';
 
 let store = createStore(
     todoApp,
@@ -18,7 +22,7 @@ let store = createStore(
 
 ReactDOM.render(
     <Provider store={store}>
-      <App/>
+        <App/>
     </Provider>,
     document.getElementById('root')
 );
