@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
 import {Provider} from 'react-redux'  //按我理解。这个provider就是redux提供给 react 的组件化容器   扩展知识： 还有router-redux什么的
 
 //这俩是gitDEMO的
@@ -17,12 +18,13 @@ import todoApp from './myDemo/reducers';
 
 let store = createStore(
     todoApp,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    applyMiddleware(thunk)
 );
 
 ReactDOM.render(
     <Provider store={store}>
-        <App/>
+      <App/>
     </Provider>,
     document.getElementById('root')
 );

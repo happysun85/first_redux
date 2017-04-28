@@ -36,3 +36,13 @@ export const setVisibility = (filter) => {
     filter
   }
 };
+
+export const testAsync = () => {
+  return () => {
+    return (dispatch,txt) => {
+      setTimeout(() => {
+        dispatch(addTodo(txt));
+      }, 1000)
+    }
+  }
+}

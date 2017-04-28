@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import AddTodo from '../components/AddTodo'
 import TodoList from '../components/TodoList'
 import Footer from '../components/Footer'
-import {addTodo, toggle_todo, setVisibility, VisibilityFilters} from '../actions'
+import {addTodo, toggle_todo, setVisibility, VisibilityFilters, testAsync} from '../actions'
 
 class App extends Component {
   render() {
@@ -26,6 +26,13 @@ class App extends Component {
         </div>
     )
   }
+
+  componentDidMount() {
+    const {dispatch} = this.props;
+    const syncTest = dispatch(testAsync());
+    syncTest(dispatch, 123);
+  }
+
 }
 
 const {
@@ -33,6 +40,7 @@ const {
   SHOW_COMPLETED,
   SHOW_ACTIVE
 } = VisibilityFilters;
+
 function filterData(state, filter) {
   switch (filter) {
     case SHOW_ALL:
@@ -49,7 +57,6 @@ function filterData(state, filter) {
     default:
       return state
   }
-
 }
 
 export default connect((state) => {
